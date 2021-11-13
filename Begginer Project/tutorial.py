@@ -32,6 +32,7 @@ def wpm_test(stdscr):
     stdscr.nodelay(True)
 
     while True:
+        
         time_elapsed = max(time.time () - start_time, 1)
         wpm = round((len(current_text) / (time_elapsed / 60)) / 5)
 
@@ -72,5 +73,5 @@ def main(stdscr):
         
         if ord(key) == 27:
             break
-        
+
 wrapper(main)
